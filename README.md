@@ -22,6 +22,28 @@ Identify the problem of customer churn in the telecommunications industry and it
 
 ### Data Understanding:
 Obtain a dataset from Kaggle consisting of 21 columns and 3333 rows, containing relevant information for predicting customer churn. Each row represents a customer, and each column represents features related to customer behavior, demographics, and interactions with SyriaTel's services.
+The columns are as follows: 
+- **state:** the state the user lives in
+- **account length:** the number of days the user has this account
+- **area code:** the code of the area the user lives in
+- **phone number:** the phone number of the user
+- **international plan:** true if the user has the international plan, otherwise false
+- **voice mail plan:** true if the user has the voice mail plan, otherwise false
+- **number vmail messages:** the number of voice mail messages the user has sent
+- **total day minutes:** total number of minutes the user has been in calls during the day
+- **total day calls:** total number of calls the user has done during the day
+- **total day charge:** total amount of money the user was charged by the Telecom company for calls during the day
+- **total eve minutes:** total number of minutes the user has been in calls during the evening
+- **total eve calls:** total number of calls the user has done during the evening
+- **total eve charge:** total amount of money the user was charged by the Telecom company for calls during the evening
+- **total night minutes:** total number of minutes the user has been in calls during the night
+- **total night calls:** total number of calls the user has done during the night
+- **total night charge:** total amount of money the user was charged by the Telecom company for calls during the night
+- **total intl minutes:** total number of minutes the user has been in international calls
+- **total intl calls:** total number of international calls the user has done
+- **total intl charge:** total amount of money the user was charged by the Telecom company for international calls
+- **customer service calls:** number of customer service calls the user has done
+- **churn:** true if the user terminated the contract, otherwise false
 
 ### Data Preparation:
 Clean the dataset by handling missing values, encoding categorical variables, and scaling numerical features. Perform exploratory data analysis to understand the distribution of features and identify potential correlations with customer churn.

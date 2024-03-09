@@ -1,4 +1,5 @@
 # Telecommunications Customer Churn Prediction Project
+#Author : MIKE KIPTOCH
 
 ## Table of Contents
 1. [Overview](#overview)
@@ -49,10 +50,45 @@ The columns are as follows:
 Clean the dataset by handling missing values, encoding categorical variables, and scaling numerical features. Perform exploratory data analysis to understand the distribution of features and identify potential correlations with customer churn.
 
 ### Modeling:
-Train multiple machine learning models, including Logistic Regression, Decision Trees, Random Forest, and XGBoost, to predict customer churn. Evaluate the performance of each model using metrics such as accuracy, precision, recall, F1-score, and AUC ROC.
+### Modeling
+
+#### Logistic Regression
+- **Description**: Logistic Regression is a statistical method for analyzing a dataset in which there are one or more independent variables that determine an outcome.
+- **Advantages**: It's a simple and interpretable model that provides probabilities for outcomes.
+- **Disadvantages**: It assumes a linear relationship between the independent variables and the log odds of the outcome.
+- **Implementation**:used the Logistic Regression model from the scikit-learn library.
+
+#### Decision Trees
+- **Description**: Decision Trees are a type of supervised learning algorithm that is used for classification and regression tasks.
+- **Advantages**: They are easy to understand and visualize, and they can handle both numerical and categorical data.
+- **Disadvantages**: They are prone to overfitting, especially with complex datasets.
+- **Implementation**:  utilized the DecisionTreeClassifier from the scikit-learn library.
+
+#### Random Forest
+- **Description**: Random Forest is an ensemble learning method that operates by constructing multiple decision trees during training and outputting the mode of the classes as the prediction of individual trees.
+- **Advantages**: It reduces overfitting by averaging multiple decision trees and provides high accuracy.
+- **Disadvantages**: It can be computationally expensive and may not perform well on very large datasets.
+- **Implementation**: employed the RandomForestClassifier from the scikit-learn library.
+
+#### XGBoost
+- **Description**: XGBoost (Extreme Gradient Boosting) is an efficient implementation of the gradient boosting framework, designed for speed and performance.
+- **Advantages**: It achieves state-of-the-art results on a variety of machine learning tasks and is highly customizable.
+- **Disadvantages**: It may require careful tuning of hyperparameters to prevent overfitting.
+- **Implementation**:  utilized the XGBClassifier from the XGBoost library.
+
 
 ### Evaluation:
-XGBoost model is the best performing model for predicting customer churn. Evaluate its performance based on accuracy, precision, recall, F1-score, and AUC ROC, compared to other algorithms.
+
+
+- **Logistic Regression**: Achieves moderate accuracy and precision, but relatively lower recall compared to other models. The AUC-ROC score indicates good overall performance, suggesting that it's effective at distinguishing between classes.
+
+- **Decision Tree**: Exhibits lower accuracy, precision, and recall compared to Logistic Regression. The AUC-ROC score is also lower, indicating suboptimal performance. Decision Tree may not generalize well to unseen data.
+
+- **Random Forest**: Shows improvement in accuracy, precision, and recall compared to the Decision Tree model. However, its AUC-ROC score remains relatively low, suggesting that it may not be as effective in distinguishing between classes.
+
+- **XGBoost**: Emerges as the best-performing model with the highest accuracy, precision, recall, F1-score, and AUC-ROC score among all models evaluated. XGBoost demonstrates superior predictive capability and is the most suitable model for predicting customer churn in this context.
+
+In summary, while all models provide some level of predictive capability, XGBoost stands out as the most effective model for accurately predicting customer churn. Its superior performance across various evaluation metrics makes it the preferred choice for deployment in practical applications.
 
 ### Conclusion:
 XGBoost is the most suitable model for predicting customer churn, exhibiting superior accuracy and AUC score compared to other algorithms. Emphasize the importance of rigorous evaluation and model selection in addressing the problem of customer churn.
